@@ -1,0 +1,23 @@
+{
+  "name": "yombal-dom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "utils.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honorableCon/yombal-dom.git"
+  },
+  "keywords": [
+    "DOM",
+    "javascript"
+  ],
+  "author": "honorable con",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/honorableCon/yombal-dom/issues"
+  },
+  "homepage": "https://github.com/honorableCon/yombal-dom#readme"
+}
