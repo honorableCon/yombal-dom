@@ -1,25 +1,70 @@
-# Yombal Dom
+<span style="font-family: 'jetbrains mono'; font-weight:700; font-size:20px;">
+
+# Yombal DOM
 
 ![yombal-dom](https://img.shields.io/badge/Js-Yombal%20Dom-red")
 
-Mettre ici la description du projet.
+A small extension adding methods to Elements and Document Object to write less code and do more.
 
-## Guide d'installation
+## Methods
 
-1. Etape 1 installation
-2. Etape 2 installation
-3. Etape 3 installation
-4. Etape 4 installation
-5. Etape 5 installation
+### Document Object
+  - **[Document.createElementWithAttributes()]()**<br>
+      Crée un nouvel élément avec des attributs.
+      - <span style='color:#FD971F;'>params</span> : <br>
+          1. tag ex: h1
+          2. attributes (sous forme de paire key/value) ex : {'class':'btn', 'value':'send'}
+  - **[Document.createElementWithText()]()**<br>
+      Crée un nouvel élément avec du text.
+      - <span style='color:#FD971F;'>params</span> : <br>
+          1. tag ex: p
+          2. textContent ex: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, debitis?"
+  - **[Document.createElementWithChilds()]()**<br>
+      Crée un nouvel élément avec des fils.
+      - <span style='color:#FD971F;'>params</span> : <br>
+          1. tag ex: form
+          2. childs (list of element) ex : [input, button]
+
+  ### Element Object
+  Element hérite des méthodes fournit par la classe parente Node et de sa classe parente avant elle : EventTarget.
+  - **[Element.setAttributes()]()**<br>
+      Définit les valeurs des attribut nommés pour le nœud courant.
+      - <span style='color:#FD971F;'>params</span> : <br>
+          1. paire key/value des attributs. ex : {'class':'btn', 'value':'send'}
+  - **[Element.appendChilds()]()**<br>
+      Ajoute les enfants spécifiés en argument comme enfant au noeud actuel.
+      - <span style='color:#FD971F;'>params</span> : <br>
+          1. childs (list of element) ex : [input, button]
+
+## Shortcut
+- _ to select element like document.querySelector
+- __ to select element like document.querySelectorAll
+- **[$()]()** like **[EventTarget.addEventListener()]()**<br>
+    Enregistre un gestionnaire d'événements d'un type d'événement spécifique sur EventTarget.
+    - <span style='color:#FD971F;'>params</span> :<br>
+        1. target(or element)
+        2. l'evenement
+        3. L'objet qui recevra un évènement lorsqu'un évènement du type spécifié se produit. ex : callback function
+        4. \[option\]
+
+## Guide 📥
+
+1. `git clone https://github.com/honorableCon/yombal-dom.git`
+2. `cd yombal-dom`
+3. copy `utils.js` to your project directory
+4. insert `<script src="utils.js"></script>` in head tag before any script
 
 ## Auteur
 
-> Mettre ici les informations concernant l'auteur du projet. Tu peux mettre aussi tes RS pour que les gens puissent te contacter facilement.
+> Created by **[Honorable Con](https://github.com/honorableCon)**, M.E.R.N Stack developer
 
 ## Contribution
 
-Mettre ici un guide expliqué pour aider les gens à contribuer sur votre projet. Ca incite les gens à contribuer.
+New methods suggestion or more.. You can tell me **[here](https://github.com/honorableCon/yombal-dom/issues)** or pull request.
+
 
 ### License
 
-Je te conseille de créer une licence MIT comme celui-ci en exemple https://github.com/daoodaba975/taaru/blob/master/License.md
+This project is under the **[GPL V3 License](https://github.com/honorableCon/yombal-dom/blob/main/LICENSE.md)**
+
+> **Jaajeuf!** 🙏🏾
