@@ -37,8 +37,8 @@ A small extension adding methods to Elements and Document Object to write less c
           1. childs (list of element) ex : [input, button]
 
 ## Shortcut
-- _ to select element like document.querySelector
-- __ to select element like document.querySelectorAll
+- **[_]()** to select element like document.querySelector
+- **[__]()** to select element like document.querySelectorAll
 - **[$()]()** like **[EventTarget.addEventListener()]()**<br>
     Enregistre un gestionnaire d'événements d'un type d'événement spécifique sur EventTarget.
     - <span style='color:#FD971F;'>params</span> :<br>
@@ -65,6 +65,6 @@ New methods suggestion or more.. You can tell me **[here](https://github.com/hon
 
 ### License
 
-This project is under the **[GPL V3 License](https://github.com/honorableCon/yombal-dom/blob/main/LICENSE.md)**
+This project is under the **[GPL V3 License](https://github.com/honorableCon/yombal-dom/blob/main/LICENSE)**
 
 > **Jaajeuf!** 🙏🏾
