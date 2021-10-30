@@ -1,5 +1,3 @@
-<span style="font-family: 'jetbrains mono'; font-weight:700; font-size:20px;">
-
 # Yombal DOM
 
 ![yombal-dom](https://img.shields.io/badge/Js-Yombal%20Dom-red")
