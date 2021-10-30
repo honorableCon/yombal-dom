@@ -48,12 +48,19 @@ A small extension adding methods to Elements and Document Object to write less c
         4. \[option\]
 
 ## Guide 📥
+### Over a CDN
+  > insert `<script src="https://unpkg.com/yombal-dom@1.0.1/utils.js" crossorigin="anonymous"></script>` in head tag
 
+### Via NPM
+1. `npm i yombal-dom`
+2. insert `<script src="node_modules/yombal-dom/utils.js"></script>` in head tag before any script
+### Via GIT
 1. `git clone https://github.com/honorableCon/yombal-dom.git`
-2. `cd yombal-dom`
-3. copy `utils.js` to your project directory
-4. insert `<script src="utils.js"></script>` in head tag before any script
+2. copy `utils.js` to your project directory
+3. insert `<script src="utils.js"></script>` in head tag before any script
 
+> eNJOY !
+  
 ## Auteur
 
 > Created by **[Honorable Con](https://github.com/honorableCon)**, M.E.R.N Stack developer
