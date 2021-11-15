@@ -33,7 +33,10 @@ A small extension adding methods to Elements and Document Object to write less c
       Ajoute les enfants spécifiés en argument comme enfant au noeud actuel.
       - <span style='color:#FD971F;'>params</span> : <br>
           1. childs (list of element) ex : [input, button]
-
+  - **[Element.toggleClass()]()**<br>
+      Ajoute ou supprime une classe (basculement)
+      - <span style='color:#FD971F;'>params</span> : <br>
+          1. value of class
 ## Shortcut
 - **[_]()** to select element like document.querySelector
 - **[__]()** to select element like document.querySelectorAll
