@@ -45,9 +45,9 @@ A small extension adding methods to Elements and Document Object to write less c
           2. objet avec comme clés les valeur entre les curly braces {}
 
       - usage :
-        1. in html file : <tag id="App">{{ title }}</tag>
+        1. in html file : \<tag id="App">{{ title }}\</tag>
         2. in js file : yombal("App", {title:"The Title"})
-        result : <tag id="App">The Title</tag>
+        result : \<tag id="App">The Title\</tag>
 
 ## Shortcut
 - **[_]()** to select element like document.querySelector
