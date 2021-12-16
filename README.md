@@ -37,6 +37,18 @@ A small extension adding methods to Elements and Document Object to write less c
       Ajoute ou supprime une classe (basculement)
       - <span style='color:#FD971F;'>params</span> : <br>
           1. value of class
+
+## Module
+  - **[yombal]()**<br>
+      - <span style='color:#FD971F;'>params</span> : <br>
+          1. id of template
+          2. objet avec comme clés les valeur entre les curly braces {}
+
+      - usage :
+        1. in html file : <tag id="App">{{ title }}</tag>
+        2. in js file : yombal("App", {title:"The Title"})
+        result : <tag id="App">The Title</tag>
+
 ## Shortcut
 - **[_]()** to select element like document.querySelector
 - **[__]()** to select element like document.querySelectorAll
@@ -50,7 +62,7 @@ A small extension adding methods to Elements and Document Object to write less c
 
 ## Guide 📥
 ### Over a CDN
-  > insert `<script src="https://unpkg.com/yombal-dom@1.0.1/utils.js" crossorigin="anonymous"></script>` in head tag
+  > insert `<script src="https://unpkg.com/yombal-dom@1.0.3/utils.js" crossorigin="anonymous"></script>` in head tag
 
 ### Via NPM
 1. `npm i yombal-dom`

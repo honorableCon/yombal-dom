@@ -1,6 +1,6 @@
 {
   "name": "yombal-dom",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "utils.js",
   "scripts": {
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "DOM",
-    "javascript"
+    "javascript",
+    "ES6"
   ],
   "author": "honorable con",
   "license": "GPL-3.0",

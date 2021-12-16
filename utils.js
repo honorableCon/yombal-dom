@@ -53,6 +53,27 @@ let $ = function(element, event, callback, option=true){
 }
 
 
+function yombal(idElement, dataObject) {
+    let element = document.getElementById(idElement);
+    const patternRegex = /{{ (.*) }}/g
+    let template = element.innerHTML;
+    let match;
+
+    while ( match = patternRegex.exec(template) ) {
+        let mustached = match[0];
+        let key = match[1];
+        let value = dataObject[key];
+        
+        if(value == undefined){
+            console.error("key", key, 'inexistante')
+            value = "";
+        }
+        template = template.replace(mustached, value);
+    }
+    element.innerHTML = template;
+}
+
+
 let _ = query => document.querySelector(query);
 
 
