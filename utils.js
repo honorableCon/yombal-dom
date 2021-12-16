@@ -19,6 +19,7 @@ Element.prototype.appendChilds = function(...childs){
 	return this;
 }
 
+
 Element.prototype.toggleClass = function(item){
 	let classIn = isItemInList(this.classList, item);
 	if (classIn == false)
@@ -28,37 +29,12 @@ Element.prototype.toggleClass = function(item){
 	return this;
 }
 
-Document.prototype.createElementWithAttributes = function(element, attributes){
-	element = document.createElement(element);
-	element.setAttributes(attributes);
-	return element;
-}; const createElementWithAttributes = Document.prototype.createElementWithAttributes;
 
-
-Document.prototype.createElementWithChilds = function(element, childs){
-	element = document.createElement(element);
-	element.appendChilds(childs);
-	return element;
-}; const createElementWithChilds = Document.prototype.createElementWithChilds;
-
-
-Document.prototype.createElementWithText = function(element, text){
-	element = document.createElement(element);
-	element.textContent = text;
-	return element;
-}; const createElementWithText = Document.prototype.createElementWithText;
-
-let $ = function(element, event, callback, option=true){
-	element.addEventListener(event, callback, option);
-}
-
-
-function yombal(idElement, dataObject) {
-    let element = document.getElementById(idElement);
+Element.prototype.replaceMustachWithObjectValues = function(dataObject) {
     const patternRegex = /{{ (.*) }}/g
-    let template = element.innerHTML;
+    let template = this.innerHTML;
     let match;
-
+    
     while ( match = patternRegex.exec(template) ) {
         let mustached = match[0];
         let key = match[1];
@@ -70,9 +46,47 @@ function yombal(idElement, dataObject) {
         }
         template = template.replace(mustached, value);
     }
-    element.innerHTML = template;
+    this.innerHTML = template;
 }
+const replaceMustachWithObjectValues = Element.prototype.replaceMustachWithObjectValues;
 
+
+Document.prototype.createElementWithAttributes = function(element, attributes){
+	element = document.createElement(element);
+	element.setAttributes(attributes);
+	return element;
+}
+const createElementWithAttributes = Document.prototype.createElementWithAttributes;
+
+
+Document.prototype.createElementWithChilds = function(element, childs){
+	element = document.createElement(element);
+	element.appendChilds(childs);
+	return element;
+}
+const createElementWithChilds = Document.prototype.createElementWithChilds;
+
+
+Document.prototype.createElementWithText = function(element, text){
+	element = document.createElement(element);
+	element.textContent = text;
+	return element;
+}
+const createElementWithText = Document.prototype.createElementWithText;
+
+
+Document.prototype.createElementFromTemplate = function(idTemplate, dataObject) {
+    let template = document.getElementById(idTemplate);
+    let element = template.content.firstElementChild.cloneNode(true);
+    element.replaceMustachWithObjectValues(dataObject);
+    return element;
+} 
+const createElementFromTemplate = Document.prototype.createElementFromTemplate;
+
+
+let $ = function(element, event, callback, option=true){
+	element.addEventListener(event, callback, option);
+}
 
 let _ = query => document.querySelector(query);
 

@@ -22,6 +22,38 @@ A small extension adding methods to Elements and Document Object to write less c
       - <span style='color:#FD971F;'>params</span> : <br>
           1. tag ex: form
           2. childs (list of element) ex : [input, button]
+  - **[Document.createElementFromTemplate()]()**<br>
+      Crée un nouvel élément depuis un template
+      - <span style='color:#FD971F;'>params</span> : <br>
+          1. idTemplate
+          2. data as object
+        - usage
+          1. in html file : 
+            ```html
+            <template id="cardTemplate">
+                <div class="card">
+                    <h1> {{ title }} </h1>
+                    <p> {{ content }} </p>
+                </div>
+            </template>
+            ```
+          2. in javascript file:
+            ```javascript
+             let element = document.createElementFromTemplate("cardTemplate", {
+                title: "the title",
+                content: "the content"
+            })
+            ```
+          - the returning element : 
+          ```html
+          <template id="cardTemplate">
+              <div class="card">
+                  <h1> the title </h1>
+                  <p> the content </p>
+              </div>
+          </template>
+          ```
+          
 
   ### Element Object
   Element hérite des méthodes fournit par la classe parente Node et de sa classe parente avant elle : EventTarget.
@@ -37,17 +69,32 @@ A small extension adding methods to Elements and Document Object to write less c
       Ajoute ou supprime une classe (basculement)
       - <span style='color:#FD971F;'>params</span> : <br>
           1. value of class
-
-## Module
-  - **[yombal]()**<br>
+  - **[Element.replaceMustachWithObjectValues()]()**<br>
+      Ajoute ou supprime une classe (basculement)
       - <span style='color:#FD971F;'>params</span> : <br>
-          1. id of template
-          2. objet avec comme clés les valeur entre les curly braces {}
+        - usage
+          1. in html file : 
+            ```html
+            <div id="card">
+                <h1> {{ title }} </h1>
+                <p> {{ content }} </p>
+            </div>
+            ```
+          2. in javascript file:
+            ```javascript
+             let card = _("#card");
+             card.replaceMustachWithObjectValues({
+                title: "un titre",
+                content: "Un contenu des.."
+            })
+            ```
+          - result : 
+          ```html
+          <div class="card">
+              <h1> un titre </h1>
+              <p> Un contenu des.. </p>
+          </div>
 
-      - usage :
-        1. in html file : \<tag id="App">{{ title }}\</tag>
-        2. in js file : yombal("App", {title:"The Title"})
-        result : \<tag id="App">The Title\</tag>
 
 ## Shortcut
 - **[_]()** to select element like document.querySelector
@@ -62,7 +109,7 @@ A small extension adding methods to Elements and Document Object to write less c
 
 ## Guide 📥
 ### Over a CDN
-  > insert `<script src="https://unpkg.com/yombal-dom@1.0.3/utils.js" crossorigin="anonymous"></script>` in head tag
+  > insert `<script src="https://unpkg.com/yombal-dom@1.0.4/utils.js" crossorigin="anonymous"></script>` in head tag
 
 ### Via NPM
 1. `npm i yombal-dom`
