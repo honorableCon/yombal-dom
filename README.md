@@ -109,7 +109,7 @@ A small extension adding methods to Elements and Document Object to write less c
 
 ## Guide 📥
 ### Over a CDN
-  > insert `<script src="https://unpkg.com/yombal-dom@1.0.4/utils.js" crossorigin="anonymous"></script>` in head tag
+  > insert `<script src="https://unpkg.com/yombal-dom@1.0.5/utils.js" crossorigin="anonymous"></script>` in head tag
 
 ### Via NPM
 1. `npm i yombal-dom`
