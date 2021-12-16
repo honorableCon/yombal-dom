@@ -31,13 +31,13 @@ Element.prototype.toggleClass = function(item){
 
 
 Element.prototype.replaceMustachWithObjectValues = function(dataObject) {
-    const patternRegex = /{{ (.*) }}/g
+    const patternRegex = /\{{([\s]*[^;\s\{]+[\s]*)\}}/g
     let template = this.innerHTML;
     let match;
     
     while ( match = patternRegex.exec(template) ) {
         let mustached = match[0];
-        let key = match[1];
+        let key = match[1].trim();
         let value = dataObject[key];
         
         if(value == undefined){
