@@ -46,12 +46,10 @@ A small extension adding methods to Elements and Document Object to write less c
             ```
           - the returning element : 
           ```html
-          <template id="cardTemplate">
               <div class="card">
                   <h1> the title </h1>
                   <p> the content </p>
               </div>
-          </template>
           ```
           
 
