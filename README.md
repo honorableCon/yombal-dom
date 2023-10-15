@@ -10,22 +10,22 @@ A small extension adding methods to Elements and Document Object to write less c
 
 ### Document Object
   - **[Document.createElementWithAttributes()]()**<br>
-      Crée un nouvel élément avec des attributs.
+      Creates a new element with attributes.
       - <span style='color:#FD971F;'>params</span> : <br>
           1. tag ex: h1
-          2. attributes (sous forme de paire key/value) ex : {'class':'btn', 'value':'send'}
+          2. attributes (as a key/value pair) ex : {'class':'btn', 'value':'send'}
   - **[Document.createElementWithText()]()**<br>
-      Crée un nouvel élément avec du text.
+      Creates a new element with text.
       - <span style='color:#FD971F;'>params</span> : <br>
           1. tag ex: p
           2. textContent ex: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, debitis?"
   - **[Document.createElementWithChilds()]()**<br>
-      Crée un nouvel élément avec des fils.
+      Creates a new element with childs.
       - <span style='color:#FD971F;'>params</span> : <br>
           1. tag ex: form
           2. childs (list of element) ex : [input, button]
   - **[Document.createElementFromTemplate()]()**<br>
-      Crée un nouvel élément depuis un template
+      Create a new element from a template
       - <span style='color:#FD971F;'>params</span> : <br>
           1. idTemplate
           2. data as object
@@ -56,21 +56,21 @@ A small extension adding methods to Elements and Document Object to write less c
           
 
   ### Element Object
-  Element hérite des méthodes fournit par la classe parente Node et de sa classe parente avant elle : EventTarget.
+  Element inherits the methods provided by the Node parent class and its parent class before it : EventTarget.
   - **[Element.setAttributes()]()**<br>
-      Définit les valeurs des attribut nommés pour le nœud courant.
+      Sets the named attribute values ​​for the current node.
       - <span style='color:#FD971F;'>params</span> : <br>
-          1. paire key/value des attributs. ex : {'class':'btn', 'value':'send'}
+          1. key/value pair of attributes.  ex : {'class':'btn', 'value':'send'}
   - **[Element.appendChilds()]()**<br>
-      Ajoute les enfants spécifiés en argument comme enfant au noeud actuel.
+      Adds the childs specified in argument as child to the current node.
       - <span style='color:#FD971F;'>params</span> : <br>
           1. childs (list of element) ex : [input, button]
   - **[Element.toggleClass()]()**<br>
-      Ajoute ou supprime une classe (basculement)
+      Adds or removes a class (toggle)
       - <span style='color:#FD971F;'>params</span> : <br>
           1. value of class
   - **[Element.replaceMustachWithObjectValues()]()**<br>
-      Ajoute ou supprime une classe (basculement)
+      Adds or removes a class (replace)
       - <span style='color:#FD971F;'>params</span> : <br>
         - usage
           1. in html file : 
@@ -84,15 +84,15 @@ A small extension adding methods to Elements and Document Object to write less c
             ```javascript
              let card = _("#card");
              card.replaceMustachWithObjectValues({
-                title: "un titre",
-                content: "Un contenu des.."
+                title: "a title",
+                content: "A content of.."
             })
             ```
           - result : 
           ```html
           <div class="card">
-              <h1> un titre </h1>
-              <p> Un contenu des.. </p>
+              <h1> a title </h1>
+              <p> A content of.. </p>
           </div>
 
 
@@ -100,11 +100,11 @@ A small extension adding methods to Elements and Document Object to write less c
 - **[_]()** to select element like document.querySelector
 - **[__]()** to select element like document.querySelectorAll
 - **[$()]()** like **[EventTarget.addEventListener()]()**<br>
-    Enregistre un gestionnaire d'événements d'un type d'événement spécifique sur EventTarget.
+    Registers an event handler of a specific event type to EventTarget.
     - <span style='color:#FD971F;'>params</span> :<br>
         1. target(or element)
-        2. l'evenement
-        3. L'objet qui recevra un évènement lorsqu'un évènement du type spécifié se produit. ex : callback function
+        2. the event
+        3. The object that will receive an event when an event of the specified type occurs.  ex: callback function
         4. \[option\]
 
 ## Guide 📥
@@ -121,7 +121,7 @@ A small extension adding methods to Elements and Document Object to write less c
 
 > eNJOY !
   
-## Auteur
+## Author
 
 > Created by **[Honorable Con](https://github.com/honorableCon)**, M.E.R.N Stack developer
 
